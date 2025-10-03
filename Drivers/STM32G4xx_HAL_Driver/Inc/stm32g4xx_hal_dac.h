@@ -31,7 +31,7 @@ extern "C" {
 /* Includes ------------------------------------------------------------------*/
 #include "stm32g4xx_hal_def.h"
 
-#if defined(DAC1) || defined(DAC2) || defined(DAC3) ||defined (DAC4)
+#if defined(DAC1) || defined(DAC2) || defined(DAC3) || defined(DAC4)
 
 /** @addtogroup DAC
   * @{

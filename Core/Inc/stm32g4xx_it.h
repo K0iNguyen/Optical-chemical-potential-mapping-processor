@@ -58,7 +58,6 @@ void SysTick_Handler(void);
 void ADC1_2_IRQHandler(void);
 void TIM2_IRQHandler(void);
 void ADC3_IRQHandler(void);
-void UART5_IRQHandler(void);
 void ADC4_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 

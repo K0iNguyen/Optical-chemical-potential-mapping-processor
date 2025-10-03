@@ -1,6 +1,8 @@
+"./Core/Src/adc_process.o"
 "./Core/Src/fifo.o"
 "./Core/Src/main.o"
 "./Core/Src/run.o"
+"./Core/Src/square_process.o"
 "./Core/Src/stm32g4xx_hal_msp.o"
 "./Core/Src/stm32g4xx_it.o"
 "./Core/Src/syscalls.o"

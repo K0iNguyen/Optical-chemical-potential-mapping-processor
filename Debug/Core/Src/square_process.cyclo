@@ -1,0 +1,1 @@
+../Core/Src/square_process.cpp:9:6:void square_process::checkPins(bool*, uint8_t*, uint8_t*)	13

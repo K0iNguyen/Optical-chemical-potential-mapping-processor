@@ -13,17 +13,9 @@ extern "C"{
 #endif
 #include "stm32g4xx_hal.h"
 #include <stdbool.h>
+#include <stdio.h>
 
-#define ADC1_IN3_Pin GPIO_PIN_2
-#define ADC1_IN3_GPIO_Port GPIOA
-#define ADC2_IN3_Pin GPIO_PIN_6
-#define ADC2_IN3_GPIO_Port GPIOA
-#define ADC3_IN1_Pin GPIO_PIN_1
-#define ADC3_IN1_GPIO_Port GPIOB
-#define ADC4_IN5_Pin GPIO_PIN_15
-#define ADC4_IN5_GPIO_Port GPIOB
-
-void run();
+HAL_StatusTypeDef run();
 void ProcessSetup(PCD_HandleTypeDef *hpcd);
 void Usb_Transmitted(PCD_HandleTypeDef *hpcd, uint8_t epnum);
 void Usb_Received(PCD_HandleTypeDef *hpcd, uint8_t epnum);

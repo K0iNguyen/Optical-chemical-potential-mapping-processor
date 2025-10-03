@@ -60,7 +60,6 @@ PCD_HandleTypeDef hpcd_USB_FS;
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
-static void MX_UART5_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_ADC2_Init(void);
 static void MX_ADC3_Init(void);
@@ -68,6 +67,7 @@ static void MX_ADC4_Init(void);
 static void MX_TIM2_Init(void);
 static void MX_DAC1_Init(void);
 static void MX_USB_PCD_Init(void);
+static void MX_UART5_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -106,7 +106,6 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_UART5_Init();
   MX_ADC1_Init();
   MX_ADC2_Init();
   MX_ADC3_Init();
@@ -114,6 +113,7 @@ int main(void)
   MX_TIM2_Init();
   MX_DAC1_Init();
   MX_USB_PCD_Init();
+  MX_UART5_Init();
   /* USER CODE BEGIN 2 */
   run();
   /* USER CODE END 2 */
@@ -495,9 +495,9 @@ static void MX_TIM2_Init(void)
   __HAL_RCC_TIM2_CLK_ENABLE();
   /* USER CODE END TIM2_Init 1 */
   htim2.Instance = TIM2;
-  htim2.Init.Prescaler = 5;
+  htim2.Init.Prescaler = 0;
   htim2.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim2.Init.Period = 84;
+  htim2.Init.Period = 169;
   htim2.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim2.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
   if (HAL_TIM_Base_Init(&htim2) != HAL_OK)
@@ -560,7 +560,7 @@ static void MX_UART5_Init(void)
   {
     Error_Handler();
   }
-  if (HAL_UARTEx_EnableFifoMode(&huart5) != HAL_OK)
+  if (HAL_UARTEx_DisableFifoMode(&huart5) != HAL_OK)
   {
     Error_Handler();
   }
